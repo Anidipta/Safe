@@ -31,7 +31,6 @@ with st.sidebar:
 # Initialize wallet_address
 wallet_address = None
 
-# Default Landing Page
 if not st.session_state.logged_in:
     landing.landing()  # Display the landing page before login/signup
 
@@ -46,15 +45,17 @@ if not st.session_state.logged_in:
 
             # Auto-register or login if user is new or logged in
             if not database.check_user_exists(wallet_address):
-                # Auto-register on wallet connect
-                password = [wallet_address[-6], wallet_address[-5], wallet_address[-2], wallet_address[-1]].astype(int)
+                password = int(wallet_address[-6] + wallet_address[-5] + wallet_address[-2] + wallet_address[-1])
                 database.add_user(wallet_address, password, "Auto Signup")
                 st.sidebar.success(f"🆕 Auto registered with password: {password}")
 
             # Save user data in session state
             st.session_state.wallet_address = wallet_address
             st.session_state.logged_in = True
-            st.session_state.user_name = wallet_address  # Optional: Replace with actual name if available
+            st.session_state.user_name = wallet_address  # You can replace this with an actual name if available
+
+            # Force the app to re-run so that the authenticated view is rendered
+            st.experimental_rerun()
 
         else:
             st.sidebar.warning("Connect your wallet.")
