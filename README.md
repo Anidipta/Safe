@@ -41,7 +41,15 @@ Crypton is ideal for:
 2. Real-world simulations of transactions, smart contracts, and staking. 💰  
 3. NFT and token rewards for progress and achievements. 🎉  
 4. Seamless Web3 wallet integration for a personalized experience. 🦊  
-5. A progress dashboard to monitor achievements and unlock new challenges. 📈  
+5. A progress dashboard to monitor achievements and unlock new challenges. 📈
+
+### How to run 
+``` bash
+https://github.com/Anidipta/Safe.git
+cd Safe
+pip install -r requirements.txt
+streamlit run app.py
+```
 
 Crypton is more than just a game—it’s an immersive journey into the future of technology and finance. Learn, play, and master blockchain concepts with Crypton! 🌟
 
