@@ -43,6 +43,11 @@ Crypton is ideal for:
 4. Seamless Web3 wallet integration for a personalized experience. 🦊  
 5. A progress dashboard to monitor achievements and unlock new challenges. 📈
 
+###🔒 Security
+End-to-end encryption for user data 🔐
+Secure Web3 wallet authentication with MetaMask & WalletConnect 🦊
+Smart contract audits to prevent vulnerabilities via Lit Protocol🛡️
+
 ### How to run 
 ``` bash
 https://github.com/Anidipta/Safe.git
